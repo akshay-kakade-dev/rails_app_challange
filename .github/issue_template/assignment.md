@@ -16,3 +16,6 @@ Expectations -
 - For pagination candidate have to build the Query builder, which will tell us problem solving skills and how candidate manages the complex code.
 - For bulk upload we can analyze skills related to the background jobs, performance considerations.
 - Documentation.
+
+Assumptions - 
+- User has many products, when products created by user through CRUD operation, it considered as a purchase
