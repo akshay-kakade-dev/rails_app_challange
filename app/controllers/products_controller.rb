@@ -2,7 +2,7 @@ class ProductsController < ApplicationController
   before_action :load_user
 
   def index
-    products = @user.products
+    products = @user.products.order(updated_at: :desc).limit(params[:page_size]).offset((params[:page].to_i - 1) * params[:page_size].to_i)
     render json: products
   end
 
