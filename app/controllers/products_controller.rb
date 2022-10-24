@@ -17,6 +17,10 @@ class ProductsController < ApplicationController
     end
   end
 
+  def upload
+    service = Resolver.upload_product_csv_to_table
+  end
+
   private
 
   def list_params

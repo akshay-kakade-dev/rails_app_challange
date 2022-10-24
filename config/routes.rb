@@ -5,4 +5,6 @@ Rails.application.routes.draw do
       resources :products, only: [:index, :create]
     end
   end
+
+  post '/users/products/upload', to: 'products#upload', as: 'product_bulk_upload'
 end

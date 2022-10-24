@@ -8,4 +8,9 @@ class Resolver
     repository = ProductCrud::Repository.new
     ProductCrud::CreateService.new(repository: repository)
   end
+
+  def self.upload_product_csv_to_table
+    csv_parser = CsvParser.new
+    ProcessProductCsvSaveToDbJob.new(csv_parser: csv_parser)
+  end
 end
