@@ -18,7 +18,7 @@ class ProductsController < ApplicationController
   end
 
   def upload
-    service = Resolver.upload_product_csv_to_table
+    ProcessProductCsvSaveToDbJob.perform_async("product.csv")
   end
 
   private

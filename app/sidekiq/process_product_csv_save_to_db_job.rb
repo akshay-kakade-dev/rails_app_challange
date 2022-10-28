@@ -1,9 +1,13 @@
 class ProcessProductCsvSaveToDbJob
   include Sidekiq::Job
 
-  def perform(csv_parser:, file:)
+  def perform(file_path)
     # Do something
-    product_data = csv_parser.parse(file: file)
-    
+    file = File.open(file_path)
+    product_data = CsvParser.new.parse(file: file)
   end
 end
+
+
+
+
