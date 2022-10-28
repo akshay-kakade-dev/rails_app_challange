@@ -40,17 +40,3 @@ end
   Product.create(generare_fake_product_data(user: users.sample))
 end
 
-# users = []
-
-# 5.times do
-#   users << {
-#     user_id: rand(100),
-#     category: ["ENTMNT", "HOME", "SPORTS", "FASHION"].sample,
-#     price: Faker::Commerce.price.to_i,
-#     name: Faker::Commerce.product_name,
-#     manufacturer: Faker::Company.name,
-#     created_at: DateTime.now,
-#     updated_at: DateTime.now
-#   }
-# end
-

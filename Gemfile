@@ -45,3 +45,6 @@ gem 'faker', '~> 1.6', '>= 1.6.6'
 
 # background processing using sidekiq 
 gem 'sidekiq'
+
+# import bulk data
+gem 'activerecord-import'
