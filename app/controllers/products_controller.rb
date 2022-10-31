@@ -1,5 +1,4 @@
 class ProductsController < ApplicationController
-  before_action :load_user
 
   def index
     service = Resolver.list_product_service
@@ -18,7 +17,8 @@ class ProductsController < ApplicationController
   end
 
   def upload
-    ProcessProductCsvSaveToDbJob.perform_async("product.csv")
+    ImportProductCsvJob.perform_async("product.csv")
+    render json: { message: "products are uploading, please wait for confirmation on email" }, status: 200
   end
 
   private

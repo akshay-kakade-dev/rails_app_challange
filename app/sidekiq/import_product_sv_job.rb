@@ -1,4 +1,4 @@
-class ProcessProductCsvSaveToDbJob
+class ImportProductCsvJob
   include Sidekiq::Job
 
   def perform(file_path)
