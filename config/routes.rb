@@ -17,5 +17,7 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :courses, only: [:create, :index]
+
   post '/users/products/upload', to: 'products#upload', as: 'product_bulk_upload'
 end
